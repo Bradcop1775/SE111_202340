@@ -59,6 +59,7 @@
                     id="g-last" placeholder="Last Name" >
 
                 </td>
+            </tr>
 
             </tr>
 
@@ -109,6 +110,7 @@
                 <td>
                     <input type="date" required name="date" id="date">
                 </td>
+            </tr>
 
             </tr>
 
@@ -122,7 +124,7 @@
                         <input type="time" required name="time" id="s-time">
                     </td>
 
-                </tr>
+            </tr>
 
 
             <tr><!--Table row-->
@@ -136,7 +138,7 @@
                     <input type="number" name="guests" value="5"
                     >
                 </td>
-
+            </tr>
                 <tr><!--Table row-->
 
                     <!--left column [labels]-->
@@ -147,7 +149,7 @@
                     <td>
                         
                     </td>
-
+                </tr>
                     <tr>
 
                         <!--left column [labels]-->
@@ -156,25 +158,29 @@
                         </td>
                         <!--right column [Inputs]-->
                         <td>
-                            <input type="radio" name="size" value="sm">sm
+                            <input type="radio" name="size" id="sm" value="sm">sm
                         
-                            <input type="radio" name="size" value="med">med
+                            <input type="radio" name="size" id="med" value="med">med
                         
-                            <input type="radio" name="size" value="lg">lg
+                            <input type="radio" name="size" id="lg" value="lg">lg
                         </td>
     
-
+                    </tr>
                 <tr><!--Table row-->
 
                     <!--left column [labels]-->
                     <td>
-                        <label for="comments">Comments:</label>
+                        <label for="drinks">Drinks</label>
                     </td>
                     <!--right column [Inputs]-->
                     <td>
-                        <textarea name="comments"
-                        id="comments" rows="10" cols="20" placeholder="Enter your comment here..." maxlength="100" style="font-family:Arial, Helvetica, sans-serif"></textarea>
                         
+    
+                            <input type="checkbox" checked name="drink1" value="coke"> Coke <br>
+                            <input type="checkbox" name="drink2" value="sprite"> Sprite <br>
+                            <input type="checkbox" name="drink3" value="fruitPunch"> Fruit Punch <br>
+                            <input type="checkbox" name="drink4" value="lemonade"> Lemonade <br>
+                            <input type="checkbox" name="drink5" value="icedTea"> Iced Tea <br>
                     </td>
 
                 
@@ -186,52 +192,74 @@
 
                     <!--left column [labels]-->
                     <td>
-                        <label for="faveColor">Favorite Color:</label>
+                        <label for="cake">Cake</label>
                     </td>
                     <!--right column [Inputs]-->
                     <td>
-                        <select name="faveColor" id="faveColor"><!--create dropdown menu-->
+                        <select name="cake" id="cake"><!--create dropdown menu-->
 
-                            <option value="red">Red</option>
-                            <option value="green">Green</option>
-                            <option value="blue">Blue</option>
+                            <option value="chocolate">Chocolate</option>
+                            <option value="vanilla">Vanilla</option>
+                            <option value="illBringMyOwn">I'll bring my own</option>
 
 
 
                         </select>
                     </td>
+                </tr>
+                    <tr><!--Table row-->
+
+                        <!--left column [labels]-->
+                        <td>
+                            <label for="decorations"><h2>Decorations</h2></label>
+                        </td>
+                        <!--right column [Inputs]-->
+                        <td>
+                            
+                        </td>
+                    </tr>
+
+                    <tr><!--Table row-->
+
+                        <!--left column [labels]-->
+                        <td>
+                            <label for="colors">Color Scheme</label>
+                            </td>
+                            <!--right column [Inputs]-->
+                        <td>
+                            <input type=Color
+                            name=colors
+                            id=colors
+                            input>
+                        </td>
 
                 
     
-                </tr>
+                    </tr>
+
+                    <tr><!--Table row-->
+
+                        <!--left column [labels]-->
+                        <td>
+                            <label for="comments">Aditional Comments</label>
+                        </td>
+                            <!--right column [Inputs]-->
+                        <td>
+                            <textarea name="comments"
+                            id="comments" rows="10" cols="20" placeholder="Please add any additional comments" maxlength="100" style="font-family:Arial, Helvetica, sans-serif"></textarea>
+                        </td>
+
+                
+    
+                    </tr>
 
                
-                
-    
-                </tr>
+                        <td>
 
-            </tr>
-            
-                <tr>
-
-                <td>
-                
-                    <label for="vehicles">Select Your Vehicles</label>
-                </td>
-
-                <td>
-
-                    <input type="checkbox" name="vehicle1" value="car">Car <br>
-                    <input type="checkbox" name="vehicle2" value="rocinante">The Rocinante <br>
-                    <input type="checkbox" name="vehicle3" value="motorcycle">motorcycle <br>
-                </td>
-
-
-                </tr>
-
+                        </td>
               
                         <td>
-                            <input type="submit" value="SUBMIT !">
+                            <input type="submit" value="submit">
                         </td>
 
                     </tr>
