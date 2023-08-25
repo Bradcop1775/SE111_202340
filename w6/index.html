@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brad">
+    <meta name="description" content="W6 Lab">
+    <title>W6 Lab | User Input</title>
+    <style>
+     #header{
+       text-align: center;
+       color: brown;
+   }
+      
+
+   </style>
+
+    <title>Week Six  Bi-Weekly Pay Calender</title>
+</head>
+<body>
+    
+
+<div id="header">
+
+            <h1><em>Week Six  Bi-Weekly Pay Calender</em></h1> 
+   <script>
+
+ 
+    //Hourly Pay
+      var pay = Number(prompt("What is your hourly pay?: "))
+      var hours = 80 
+
+     //Gross Pay
+      var grossPay = pay * hours
+
+    
+     
+
+    
+      console.log(grossPay) 
+
+
+     //Uncle Sam
+      var tax = grossPay * .2
+
+      console.log(`Uncle Sam's Share: \n${tax}`)
+
+    //Net
+      var net = grossPay * .8
+
+      console.log("Net Pay: \n${sum2}")
+
+      alert(`Gross Pay: ${grossPay.toFixed(2)}\n` +
+              `Uncle Sam's Share: ${tax.toFixed(2)}\n` +
+              `Net Pay: ${net.toFixed(2)}\n`);
+      
+
+
+   </script>
+
+</body>
+</html>
