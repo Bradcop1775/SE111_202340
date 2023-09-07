@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W8 | JS Data Structure</title>
+</head>
+<body>
+
+        <h1>W8 javascript Demo | Arrays and Objects</h1>
+
+        <div id="output">
+            <!--wrint info here-->
+
+        </div>
+
+        <script>
+            //basic key + value --> variable names = dataValue
+
+            var name = 'Katie'
+            console.log(name) //displaus value stored to simple var
+
+            //ARRAYS-----------------------------------------------------
+            //key --> [index], [i]
+
+            //create a new populated array
+            //to just creat: var people = []
+            var people= [
+                `Kaitie`,
+                `Toni`,
+                `Dave`
+            ]
+
+            console.log(`Array: ${people}`) //entire collection of data
+            console.log(`First value of Array: ${people[0]}`) 
+            //arayName[index] --. name + key = value
+
+            //store a single value
+            var firstPerson= people[0]
+            console.log(`First person in array: ${firstPerson}`)
+
+            //add value to the array
+            people.push(`Brad`)
+            console.log(`Array: ${people}`) //entire collection of data
+
+            //length return # of items
+            console.log(`The length of the people is: ${people.length}`)
+
+            //ask the user to add a name to the array
+            people.push(prompt(`Enter a name for the array: `))
+            console.log(`Array: ${people}`) //entire collection of data
+
+            //PARALLEL ARRAY -----------------------------------------------
+            //another 1D array whos data is connected to the other array
+            //data stays connected via matching index!
+            var color = [
+                `gray`,
+                `purple`,
+                `black`,
+                `blue`,
+                `green`
+            ]
+
+            console.log(`${people[1]}'s favorite color is ${color[1]}!`)
+
+            var age = []
+
+            //PROCESSING ARRAYS ------ see all 
+            for(let index = 0; index < people.length; index++)
+            {
+                console.log(`${people[index]}'s favorite color is ${color[index]}!`)
+                age.push(prompt(`Enter age for the array: `))
+            }
+
+            // * same idea with while loop
+                    //var index = 0
+               // while (index < people.lenth)
+                //{
+               //     //do something
+               //     index = index + 1
+              //  }
+                
+
+            //adding data to the HTML page
+            //store element
+            var output = document.querySelector(`#output`)
+            
+            for(let index = 0; index < people.length; index++)
+            {
+                output.innerHTML += `${people[index]} age is ${age[index]} and color is ${color[index]}! <br>`
+            }
+
+        //OBJECTS IN 35 ----------------------------------------------
+        var person1 = {
+            first: `Dave`,
+            last: `Leclair`,
+            age: 19,
+            pets: false,
+            greetings: function() {
+                alert(`Hello from${this.first}!`)
+            },
+            classes:[`SE111`, `CyB123`, `NE1211`]
+        }
+
+            //view all
+
+        for(let key in person1){
+    
+
+            console.log(`${key}: ${person1[key]}`)
+
+
+
+
+            }
+
+
+
+            var person2 = {
+            first: `Brad`,
+            last: `Coppinger`,
+            age: 19,
+            pets: false,
+            greetings: function() {
+                alert(`Hello from${this.first}!`)
+            },
+            classes:[`SE111`, `CyB123`, `NE1211`]
+        }
+
+            //view all
+
+        for(let key in person1){
+    
+
+            console.log(`${key}: ${person1[key]}`)
+
+
+
+
+            }
+            
+
+
+    //Put it all together
+    //in order to process data structures populated with date structures --> we need LOOPCEPTION
+
+    var humans = [
+
+    person1, //dave\
+    person2, //toni
+        ]
+
+    //process first
+    var newOutput=``
+
+    for(let i=0; i <humans.length; i++){
+    //this loop controls which array value
+        newOutput += `<h3>INFOR FOR: ${humans[i].first}: </h3>`
+        
+
+        for(let key in humans[i])
+        {
+            //thi sloop in current array 
+            newOutput += `<p><b>${key}:</b> ${humans[i][key]} </p>`
+        }
+
+        //display a hz rile
+        newOutput += `<hr>`
+    }
+
+    //write infor on page
+    document.querySelector(`#output`).innerHTML += newOutput
+
+        </script>
+
+
+    
+</body>
+</html>
