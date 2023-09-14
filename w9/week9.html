@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta>
+<title>Week 2 Files</title>
+<meta name="author" content="Brad">
+<meta name="description" content="W9 Lab">
+<style type="text/css">
+	.border{border:1px solid black;}
+</style>
+</head>
+
+<body>
+</body>
+
+<script type="text/javascript">
+	//Use this Array of objects to complete the assignment.
+	var people =[
+		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+		{first:"Marion", last:"Cobretti", credit:"Cobra" }
+	]
+	
+	var body = document.querySelector("body")
+
+	for(let i = 0; i < people.length; i++)
+	{
+		var tempDiv 
+
+		tempDiv = docuemnt.createElement(`div`)
+
+		tempDiv.setAttribute(`id`, i)
+        tempDiv.setAttribute(`class`, `border`)
+
+		for(key in people[i])
+                {
+
+                    //create a new paragraph tag for each property, and a new text node to hold the property value and content for p tag
+                    var p = document.createElement(`p`)
+
+                    //add a new text node
+                    var text = document.createTextNode(people[i][key])
+
+                    //add text to p tag; add p tag to the page (document)
+                    p.appendChild(text)
+                    tempDiv.appendChild(p)
+
+                }//end of object loop
+
+		body.appendChild(tempDiv)
+	}
+	
+</script>
+
+</html>
