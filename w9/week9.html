@@ -29,15 +29,18 @@
 	var body = document.querySelector("body")
 
 	for(let i = 0; i < people.length; i++)
-	{
-		var tempDiv 
+            {
 
-		tempDiv = docuemnt.createElement(`div`)
+                console.log(people[i].last) //show array in console
 
-		tempDiv.setAttribute(`id`, i)
-        tempDiv.setAttribute(`class`, `border`)
+                //create an element for each object in the array
+                var tempDiv = document.createElement(`div`)
 
-		for(key in people[i])
+                tempDiv.setAttribute(`id`, i)
+                tempDiv.setAttribute(`class`, `border`)
+
+                //go into a specific object and access all of its properties + values
+                for(key in people[i])
                 {
 
                     //create a new paragraph tag for each property, and a new text node to hold the property value and content for p tag
@@ -52,7 +55,8 @@
 
                 }//end of object loop
 
-		body.appendChild(tempDiv)
+                //add the entire div (containing all object property info) to the page
+                body.appendChild(tempDiv)
 	}
 	
 </script>
